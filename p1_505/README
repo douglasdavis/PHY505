@@ -1,0 +1,37 @@
+** Adapted from Geant4 example basic/B4c
+
+-------------
+Check out head and compile from scratch on grads-f0.internal
+-------------
+cd $HOME
+git clone git@github.com:dougphy/p1_505.git
+cd p1_505
+source /xtmp/geant/v10.1/bin/geant4.sh
+mkdir build
+cd build
+cmake ..
+make
+./example
+
+-------------
+Recompiling and Running
+(source geant4 first...)
+-------------
+
+if(clean make/changed includes etc){
+cd build
+rm -rf *
+cmake ..
+}
+make
+./example
+
+-------------
+Using git
+-------------
+git status
+git add files
+git pull
+git commit -m “ ”
+git push origin master
+

@@ -1,0 +1,16 @@
+build
+*.pyc
+*.swp
+report/*.swp
+pres/*.swp
+pres/pres.log
+pres/pres.aux
+pres/pres.toc
+pres/pres.snm
+pres/pres.nav
+pres/pres.out
+pres/pres.pdf
+report/paper1.pdf
+report/paper1.aux
+report/paper1.log
+report/*.bib
