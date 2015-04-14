@@ -1,7 +1,6 @@
 \documentclass[aps,prd,twocolumn,nofootinbib]{revtex4-1}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{fourier}
 \usepackage{subfig}
 \usepackage{epsfig}
 \usepackage{listings}
@@ -9,9 +8,8 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{verbatim}
 \usepackage{float}
-
 \begin{document}
-\title{Sterile Neutrinos}
+\title{A Survey of Sterile Neutrinos}
 \author{Douglas Davis}
 \author{Matthew Epland}
 \author{Justin Raybern}
@@ -19,60 +17,73 @@
 \affiliation{Department of Physics, Duke University, Durham, NC 27707, USA}
 \date{\today}
 \begin{abstract}
-an abstract
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxx
 \end{abstract}\maketitle
-
 \section{Theory}
 \label{sec:theory}
-theory is fun
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 \subsection{Theory Ping}
-theory is cool
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 \subsection{Theory Justin}
-theory is ok
-
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 \section{Previous Experimental Efforts}
-experiments have search for this stuff
-\subsection{LSND Doug}
-yea they have
+There exists considerable experimental evidence for the existence of a fourth neutrino at energy scales in the eV range. The sources for evidence include the short baseline neutrino oscillation experiments LSND (Liquid Scintillator Neutrino Detector) at Los Alamos~\cite{LSND}, and MiniBooNE (Mini Booster Neutrino Experiment) at Fermilab~\cite{mini1,mini2}. There is also the reactor neutrino anomaly~\cite{reactor_anom1}, and also in the radioactive source calibrations for the solar neutrino experiments GALLEX~\cite{gallex1,gallex2} and SAGE~\cite{sage1,sage2}.
+\subsection{LSND}
+The LSND experiment was developed to search for $\overline{\nu}_\mu \rightarrow \overline{\nu}_e$ oscillations. The source of $\overline{\nu}_\mu$ was the decay at rest (DAR) of $\mu^+$. LSND used a proton beam on a target to produce pions. The decay chain was as follows:
+\begin{align}
+  \begin{split}
+    \pi^+ &\rightarrow \mu^+  \nu_\mu, \\
+    \mu^+ &\rightarrow e^+  \nu_e  \overline{\nu}_\mu.
+  \end{split}
+\end{align}
+The $\overline{\nu}_e$ events were detected through the interaction:
+\begin{align}
+  \overline{\nu}_e  p \rightarrow e^+ n,
+\end{align}
+inside of a large Cherenkov detector filled with liquid scintillator, utilizing 1280 phototubes. Figure~\ref{fig:lsnd_miniboone}(L) shows the excess of $\overline{\nu}_e$ events observed by LSND. The observation was $87.9\pm 22.4\pm6$ events over expected background. Their final result claimed the existence of $\overline{\nu}_\mu\rightarrow\overline{\nu}_e$ oscillations at $\Delta m^2 \sim 1\text{ eV}$ with 3.8$\sigma$. This is in heavy conflict with the existing three light flavor neutrino model supported by atmospheric and solar neutrino oscillation experiments, as well as measurements at LEP predicting $N=2.984\pm0.0082$ for weakly interacting neutrino flavors. Therefore, at least one ``sterile'' neutrino is required.
+\begin{figure*}
+  \includegraphics[width=1\textwidth]{../figures/lsnd_miniboone.pdf}
+  \caption{(L) ... (C) ... (R) ...}
+  \label{fig:lsnd_miniboone}
+\end{figure*}
 \subsection{MiniBooNE Doug}
-haven't found it yet
-
+The MiniBooNE experiment was developed to answer the LSND anomaly.
+\subsection{Reactor Anomaly}
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 \section{Current and Future Experimental Efforts}
 yep
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 \subsection{Current Matt}
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 experiment
 \subsection{Future Matt}
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 is cool
 
 \section{Conclusions}
+xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
 who cares
 
 \begin{thebibliography}{9}
-\bibitem{holder}
-  Personal correspondence with Albert Einstein. (July 1920).
+\bibitem{LSND}
+  A.~Aguilar-Arevalo \emph{et al.} Evidence for neutrino oscillations from the observation of anti-neutrino(electron) appearance in a anti-neutrino(muon) beam. \emph{Phys. Rev. D.}, {\bf 64} 112007, 2001.
+\bibitem{mini1}
+  A.~Aguilar-Arevalo \emph{et al.} Event Excess in the MiniBooNE Search for $\nu_\mu \rightarrow \nu_e$ Oscillations. \emph{Phys. Rev. Lett.}, {\bf 105} 181801, 2010.
+\bibitem{mini2}
+  A.~Aguilar-Arevalo \emph{et al.} Improved Search $\nu_\mu \rightarrow \nu_e$ Oscillations in the MiniBooNE Experiment. \emph{Phys. Rev. Lett.}, {\bf 110} 161801, 2013.
+\bibitem{reactor_anom1}
+  G. Mention, M. Fechner, Th. Lasserre, Th.A. Mueller, D. Lhuillier, \emph{et al.} The Reactor Antineutrino Anomaly. \emph{Phys. Rev. D.}, {\bf 83} 073006, 2011.
+\bibitem{reactor_anom2}
+  Th. A. Mueller, D. Lhuillier, M. Fallot, A. Letourneau, S. Cormon, \emph{et al.} Improved Predictions of Reactor Antineutrino Spectra. \emph{Phys. Rev. C.}, {\bf 83} 054615, 2011.
+\bibitem{gallex1}
+  P.~Anselmann~\emph{et al.} First results from the Cr-51 neutrino source experiment with the GALLEX detector. \emph{Phys. Lett. B.}, {\bf 342} 440-450, 1995
+\bibitem{gallex2}
+  W.~Hampel~\emph{et al.} Final results of the Cr-51 neutrino source experiments in GALLEX. \emph{Phys. Lett. B.}, {\bf 420} 114-126, 1998.
+\bibitem{sage1}
+  Dzh.~N.~Abdurashitov, V.N.~Gavrin, S.V. Girin, V.V. Gorbachev, Tatiana V. Ibragimova, \emph{et al.} The Russian-American gallium experiment (SAGE) Cr neutrino source measurement. \emph{Phys. Rev. Lett.}, {\bf 77} 4708-4711, 1996.
+\bibitem{sage2}
+  J.~N.~Abdurashitov~\emph{et al.} Measurement of the response of the Russian-American gallium experiment to neutrinos from a Cr-51 source. \emph{Phys. Rev. C.}, {\bf 59} 2246-2263, 1999.
+
 \end{thebibliography}
 
 \end{document} %%% end of doc %%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\bibitem{ketzer}
-  Bernhard Ketzer, \textit{Hybrid Mesons}, Proceedings of Science, Sixth International Conference on Quarks and Nuclear Physics, PoS(QNP2012)025, \url{http://pos.sissa.it/archive/conferences/157/025/QNP2012_025.pdf} %\url{http://arxiv.org/abs/1208.5125}
-\bibitem{belle}
-  S.~K.~Choi~\emph{et. al.}, \emph{Observation of a Resonancelike Structure in the} $\pi^{+-}\psi^{\prime}$ \emph{Mass Distribution in Exclusive} $B\rightarrow K \pi^{+-}\psi^{\prime}$ \emph{Decays}. Phys. Rev. Lett. \textbf{100}, 142001 8 April 2008.
-\bibitem{z4430_dmolecule}
-  E.~Braaten~and~M.~Lu, \emph{Line shapes of the Z(4430)} Phys. Rev. D \textbf{79} 051503(R) 11 March 2009
-\bibitem{lhcb} % {j4}
-  LHCb Collaboration, R. Aaij \textit{et al.}, \textit{Observation of the Resonant Character of the }$Z(4430{)}^{-}$\textit{ State}, Phys. Rev. Lett., \textbf{112}, 22 (2014). \url{http://dx.doi.org/10.1103/PhysRevLett.112.222002}%\url{http://link.aps.org/doi/10.1103/PhysRevLett.112.222002}
-\bibitem{j1}
- K.A. Olive \textit{et al.} (Particle Data Group), \textit{hi} (Revised March 2006 by C. Amsler), Chin. Phys. C, 38, 090001 (2014), \url{http://pdg.lbl.gov/2006/reviews/nonqqbar_mxxx050.pdf}
-\bibitem{j2}
- Vincent Mathieu, Nikolai Kochelev, and Vicente Vento, \emph{The Physics of Glueballs}, Int. J. Mod. Phys. E \textbf{18}, 1 (2009), \url{http://www.worldscientific.com/doi/abs/10.1142/S0218301309012124}
-\bibitem{j3}
- Wolfgang Ochs, \emph{The status of glueballs}, J. Phys. G: Nucl. Part. Phys. \textbf{40}, 043001 (2013), \url{http://dx.doi.org/10.1088/0954-3899/40/4/043001}
-
-
