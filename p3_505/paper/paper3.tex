@@ -19,9 +19,13 @@
 \begin{abstract}
 Neutrinos are light, weakly interacting, left-handed leptons in the Standard Model of particle physics. The discovery of neutrino oscillations (suggesting neutrinos actually have mass) has led to a fruitful time in neutrino research. Oscillation experiments measure the oscillation parameters $\Delta m^2$ and $\sin^2 2\theta$, which are the mass splittings of neutrino mass eigenstates and the mixing angles of a unitary transformaton matrix that governs the oscillation probabilities. Experiments have measured these parameters, and some results suggest the existence of the expected three weakly interacting neutrinos, but also the possibility of more neutrinos which are not weakly interacting, and are therefore given the name ``sterile'' neutrino. We summarize the theory and experimental evidence in the sterile neutrino sector.
 \end{abstract}\maketitle
+\section{Introduction}
+The Standard Model of Particle Physics continues to succeed wonderfully in making predictions in nature.  The discovery of the Higg's Boson is just one example of the predictive power of the model.  There are places in nature, however, where the Standard Model fails - the fact that neutrinos have mass, which is confirmed by flavor oscillations, is completely outside the model.  The smallness of the neutrino mass cannot be explained definitively by theory either.  And even more interestingly, neutrinos seem to only come as left-handed particles.
+
+In this work we lay out some of basic Standard Model theory concerning neutrinos.  We then describe oscillations and the significance of that behavior.  We then explain sterile neutrinos - neutrinos that do not interact via the weak force, and how the see-saw model of neutrino mass can simultaneously explain light, left-handed neutrinos.  We discuss some of the contested experimental evidence for sterile neutrinos and future experimental work in the field.
 \section{Theory}
 \label{sec:theory}
-\subsection{Standard Model and Beyond Standard Moden Neutrinos}
+\subsection{Standard Model, and Beyond, Neutrinos}
 A neutrino is an electrically neutral, weakly interacting elementary particle with half integer spin. There are three generations of leptons and their corresponding neutrino: electron \& electron-neutrino, muon \& muon-neutrino, and tau \& tau-neutrino. Neutrinos were first postulated as products in beta decay. From the experiment of radioactive decay, the outgoing electron energy varies; therefore it is not a 2-body decay, but actually a 3-body decay. Pauli first called that small, neutral charge particle neutrino.
 
 In the Standard Model, there are three generations of neutrinos, and the Lagrangian has no neutrino mass term. Also, neutrinos and anti-neutrinos are distinct, separated by helicity. From experiment measurements, neutrinos always have left helicity and anti-neutrinos with right helicity. Neutrinos couple ony with the $W$ and the $Z$ bosons in this model~\cite{ping1}.
@@ -167,7 +171,14 @@ Naturally, the probability of survival is defined as:
   P(\nu_{\mu}\rightarrow\nu_{\mu}) = 1-\sin^22\theta\sin^2\left(\frac{1.27\Delta m^2 \left[\text{eV}^2\right] L [\text{km}]}{E[\text{GeV}]}\right).
   \label{eq:surv}
 \end{equation}
-\subsection{Theory Justin}
+Oscillation and survival probabilities for $\nu_\mu\rightarrow\nu_e$ are shown in Figure~\ref{fig:probs}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{../figures/oscillation_prob.pdf}
+  \caption{Oscillation and survival probabilities for the two neutrino state with an initial $\nu_{\mu}$. The values for $\Delta m^2$ and $\sin^22\theta$ ($2.41\times 10^{-3}$ eV$^2$ and 0.97, respectively) are taken from 2013 MINOS result (PRL, 110, 251801)}
+  \label{fig:probs}
+\end{figure}
+\subsection{See-Saw Neutrinos}
 The See-Saw method is the most common way of explaining the possible existence of sterile neutrinos.  The fact that there are no right-handed neutrinos, despite there being both left- and right-handed leptons, leaves theorists unsatisfied. Experiment confirms the lack of right-handed neutrinos.  The small masses of the neutrinos is also unsettling. This can be reconciled by introducing right-handed terms in the neutrino Lagrangian~\cite{justin1}. The Lagrangian for a neutrino should include a mass term.  The idea of sterile neutrinos arises from the addition of some nonzero right-handed component in the Lagrangian. This is seen in
 \begin{align}
   \begin{split}
@@ -182,7 +193,15 @@ The See-Saw method is the most common way of explaining the possible existence o
   \end{pmatrix},
   \end{split}
 \end{align}
-where $\nu$ and $N$ are the left- and right-handed neutrino components, respectively. The Dirac mass is given by $m_D$ and the Majorana mass is given my $M$. It is easy to show that the eigenvalues of this matrix, if $m_D \ll M$, are $m_D^2/M$ and $M$ with the approximate eigenvectors associated with the left- and right- handed neutrinos. This means that we have the normal neutrino eigenstate and a sterile neutrino eigenstate.
+where $\nu$ and $N$ are the left- and right-handed neutrino components, respectively. The Dirac mass is given by $m_D$ and the Majorana mass is given my $M$. It is easy to show that the eigenvalues of this matrix, if $m_D \ll M$, are $m_D^2/M$ and $M$ with the approximate eigenvectors associated with the left- and right- handed neutrinos. This means that we have the normal neutrino eigenstate and a sterile neutrino eigenstate. One can see that as $M$ increases or decreases $m_D^2/M$ does the opposite -- thus the name ``see-saw.'' See Figure~\ref{fig:seesaw}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.84\linewidth]{../figures/seesaw.pdf}
+  \caption{An illustration of the see-saw mechanism with left handed and right handed neutrino masses}
+  \label{fig:seesaw}
+\end{figure}
+
+There are different see-saw models associated with the introduction of isospin singlets, scalar triplets, and fermion triplets for types I, II, and III respectively.  The Type I See-Saw model is by far the most popular with theorists.  It suffers from requiring an incredibly large majorana mass around $10^{13}$ GeV making it untestable in current particle accelerators~\cite{justin2}. Type II models also rely on quite large Majorana masses. Type III models have the best chance at experimental verification but are the least phenomenologically satisfying and are thus the least popular.
 
 \section{Previous Experimental Efforts}
 There exists considerable experimental evidence for the existence of a fourth neutrino at energy scales in the eV range. The sources for evidence include the short baseline neutrino oscillation experiments LSND (Liquid Scintillator Neutrino Detector) at Los Alamos~\cite{LSND}, and MiniBooNE (Mini Booster Neutrino Experiment) at Fermilab~\cite{mini1,mini2}. There is also the reactor neutrino anomaly~\cite{reactor_anom1}, and also in the radioactive source calibrations for the solar neutrino experiments GALLEX~\cite{gallex1,gallex2} and SAGE~\cite{sage1,sage2}.
@@ -265,11 +284,19 @@ The Daya Bay experiment is a reactor antineutrino experiment with six liquid sci
 While there are many future neutrino experiments in various stages of development, MicroBooNE and NOvA are the closest to producing new sterile neutrino results. As its name suggests, MicroBooNE is the larger follow up experiment to MiniBooNE. The MicroBooNE detector is an advanced time projection chamber with a 60 ton fiducial volume of liquid argon, and unlike MiniBooNE it will be able to distinguish between photons and electrons. It is widely expected that these significant improvements will allow MicroBooNE to resolve the MiniBooNE excess anomaly. The NOvA experiment is a long baseline experiment that uses the same NuMI neutrino beam from Fermilab as MINOS and also has its far detector located in northern Minnesota. The 330 ton near and 14 kton far detectors are liquid scintillator designs located near the surface. NOvA's primary purpose is to make oscillation measurements, including potentially determining the ordering of the mass hierarchy, but will produce more sterile neutrino measurements as well.
 
 \section{Conclusions}
-xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx
+The discovery of heavy, right-handed sterile neutrinos would help explain some of the mystery surrounding the nature of neutrinos.  While there is some evidence for sterile neutrinos from LSND and MiniBooNE, it is very hotly contested evidence.  Further work remains to be done before the answer is clear.  Neutrino specific experiments like MINOS+, Super-K, and Daya Bay are continuing the search for evidence for sterile neutrinos.  As the amount of data continues to increase, the anomalies will certainly be confirmed or refuted very soon.
 
 \begin{thebibliography}{9}
 \bibitem{ping1}
   T2K Experiment -- \url{http://t2k-experiment.org/neutrinos/in-the-standard-model/}
+\bibitem{ping2}
+Solar neutrinos. Rep. Prog. Phys. 64 (2001) 97–146
+\bibitem{ping3}
+Daya Bay Experiment: \url{https://www.bnl.gov/science/dayabay.php}
+\bibitem{ping4}
+Neutrinoless double beta decay and CP violation Physics Letters B Volume 157, Issues 5–6, 25 July 1985, Pages 442–446
+\bibitem{ping5}
+Neutrinoless Double Beta Decay Experiments. arXiv:1408.2455v1 [hep-ex] 11 Aug 2014
 
 \bibitem{ponte}
   B.~Pontecorvo,
@@ -285,7 +312,9 @@ xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx xxxxxxxx xxxxxx 
   \emph{Phys. Rev. Lett.}, {\bf 53}, 1802 (1984).
 
 \bibitem{justin1}
-Biswajoy Brahmachari, A see-saw model of sterile neutrino, \emph{Physics Letters B}, {\bf 461} 3, 26 August 1999, Pages 243-247.
+Biswajoy Brahmachari, A see-saw model of sterile neutrino, \emph{Phys. Lett. B,}, {\bf 461} 3, 26 August 1999, Pages 243-247.
+\bibitem{justin2}
+W. Grimus, L. Lavoura, B. Radovcic, Type II seesaw mechanism for Higgs doublets and the scale of new physics, \emph{Phys. Lett. B.}, {\bf 674}, 2, 13 April 2009, Pages 117-121.
 \bibitem{LSND}
   A.~Aguilar-Arevalo \emph{et al.} Evidence for neutrino oscillations from the observation of anti-neutrino(electron) appearance in a anti-neutrino(muon) beam. \emph{Phys. Rev. D.}, {\bf 64} 112007, 2001.
 \bibitem{mini1}
