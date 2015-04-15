@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage{bbm}
 \usepackage{ulem}
+\usepackage{feynmp-auto}
 \usepackage{slashed}
 \usepackage{graphicx}
 \usepackage{textpos}
@@ -95,8 +96,226 @@
 \begin{frame}
   \frametitle{Outline}
   \begin{itemize}
-  \item neutrinos are kewl
-  \item and maybe sterile who knows
+  \item Introduction to neutrinos
+  \item Standard model neutrinos and neutrino oscillations
+  \item Sterile neutrinos
+  \item Past sterile evidence
+  \item Current and future status of sterile analysis.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Little Neutral One}
+  \begin{itemize}
+  \item No charge, small mass $\sim 0.320 \pm 0.081 \text{ eV}$ (sum of 3 flavors), spin 1/2 fermions.
+  \item Interactions mediated only by the weak interaction.
+  \item First theorized due to observed $\beta$-decay spectrum. Distribution of $\beta$ particle energy suggests three-body decay.
+  \item Existence of antineutrino is indicated from inverse $\beta$-decay.
+  \item Helicity: massless particle? \\
+    neutrinos: (always) left-handed from experiments.\\
+    antineutrinos: (always) right-handed from experiments.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Neutrinos in the Standard Model}
+  \begin{itemize}
+  \item In the standard model, exactly zero mass;
+    There is no mass term in the SM Lagrangian
+  \item Neutrinos and antineutrinos are distinct (Dirac particles)
+  \item Exactly three neutrinos with lepton number conservation
+  \item Couple to the $W$ and the $Z$ only.
+  \end{itemize}
+  \vspace{1cm}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      \begin{center}
+        \begin{fmffile}{Znunu}
+          \begin{fmfgraph*}(60,50)
+            \fmfstraight
+            \fmfleftn{i}{1}\fmfrightn{o}{2}
+            \fmf{boson}{i1,v1}
+            \fmf{fermion}{o1,v1,o2}
+            \fmflabel{$Z$}{i1}
+            \fmflabel{$\overline{\nu}$}{o1}
+            \fmflabel{$\nu$}{o2}
+          \end{fmfgraph*}
+        \end{fmffile}
+      \end{center}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{center}
+        \begin{fmffile}{Wenu}
+          \begin{fmfgraph*}(60,50)
+            \fmfstraight
+            \fmfleftn{i}{1}\fmfrightn{o}{2}
+            \fmf{boson}{i1,v1}
+            \fmf{fermion}{o1,v1,o2}
+            \fmflabel{$W^-$}{i1}
+            \fmflabel{$\overline{\nu}$}{o1}
+            \fmflabel{$e^-$}{o2}
+          \end{fmfgraph*}
+        \end{fmffile}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Neutrinos beyond the Standard Model}
+  \begin{itemize}
+  \item Neutrino has mass as indicated by oscillations.
+  \item Helicity can therefore change, not permanent anymore.
+  \item There are many models and extensions added to the Standard Model to resolve questions.
+  \item Majorana particle and exact mass? $0\nu2\beta$ experiments are taking this on.
+  \item Where does the mass come from? See-Saw model is an idea.
+  \item CP violation and lepton number conservation? No if they are Majorana.
+  \item Sterile neutrinos, interacting only through gravitation?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Flavor Oscillations}
+  \begin{itemize}
+  \item Mass eigenstates and flavor eigenstates are different; a unitary mixing matrix governs the transformation from one basis to the other.
+    \begin{align}
+      |\nu_j\rangle &= \sum_\alpha U_{\alpha j}|\nu_\alpha\rangle \\
+      |\nu_j(t)\rangle\rangle &= e^{-iE_j t}|\nu_j\rangle \\
+      |\nu_\alpha\rangle &= \sum_{j=1}U^{*}_{\alpha j}|\nu_j\rangle \\
+      \rightarrow |\nu_\alpha(t)\rangle &= \sum_{\beta=e,\mu,\tau}\sum_{j=1,2,3} U_{\beta j}U^*_{\alpha j}e^{-iE_jt}|\nu_\beta\rangle \\
+      P(\nu_\alpha\rightarrow \nu_\beta) &= |\langle\nu_\beta|\nu_\alpha\rangle|^2 \\
+      &= \sum_{j=1}^3\sum_{k=1}^3 U^*_{\alpha j}U_{\alpha k}U_{\beta j}U_{\beta k}^* e^{-i(E_j-E_k)k}.
+    \end{align}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Flavor Oscillations}
+  \begin{itemize}
+  \item Using $E\approx p$ (ultrarelativistic neutrinos), and $L = ct$:
+    \begin{align}
+      E_j - E_k &= \left(m_j^2 - m_k^2\right)/2E = \Delta m_{jk}^2/2E \\
+      P &= \sum_{j=1}^3\sum_{k=1}^3 U^*_{\alpha j}U_{\alpha k}U_{\beta j}U_{\beta k}^* e^{-i\Delta m_{jk}^2L/2E}
+    \end{align}
+  \item And therefore a complete expression without hte complex exponential is:
+    \begin{align}
+        P(\nu_{\alpha}\rightarrow\nu_{\beta}) = \delta_{\alpha\beta} & - 4\sum_{j>k}\Re\left(U_{\alpha j}^*U_{\alpha k}U_{\beta j}U_{\beta k}^*\right)\sin^2\left(\frac{\Delta m_{jk}^2}{4E}L\right) \nonumber \\
+  & + 2\sum_{j>k}\Im\left(U_{\alpha j}^*U_{\alpha k}U_{\beta j}U_{\beta k}^*\right)\sin\left(\frac{\Delta m_{jk}^2}{2E}L\right).
+    \end{align}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Flavor Oscillations}
+  \begin{itemize}
+  \item The Pontecorvo Maki, Nakagawa, Sakata Matrix
+\begin{align}
+  U & =
+  \begin{pmatrix}
+    U_{e1}    & U_{e2}    & U_{e3}   \\
+    U_{\mu1}  & U_{\mu2}  & U_{\mu3} \\
+    U_{\tau1} & U_{\tau3} & U_{\tau3}
+  \end{pmatrix} \\
+  \label{eq:umatrix}
+  & = \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & c_{23} & s_{23} \\
+    0 & -s_{23} & c_{23} \end{pmatrix} \times
+  \begin{pmatrix}
+    c_{13} & 0 & s_{13}e^{-i\delta} \\
+    0      & 1 & 0 \\
+    -s_{13}e^{i\delta} & 0 & c_{13} \end{pmatrix} \times
+  \begin{pmatrix}
+    c_{12} & s_{12} & 0 \\
+    -s_{12} & c_{12} & 0 \\
+    0 & 0 & 1
+  \end{pmatrix} \\
+  & = \begin{pmatrix}
+    c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta} \\
+    -s_{12}c_{23} - c_{12}s_{23}s_{13}e^{i\delta} & c_{12}c_{23} - s_{12}s_{23}s_{13}e^{i\delta} & s_{23}c_{13} \\
+    s_{12}s_{23} - c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23} - s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13}
+  \end{pmatrix}.
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Flavor Oscillations}
+  \begin{itemize}
+    \item Simple two neutrino oscillation model.
+    \begin{align}
+      \begin{split}
+        \begin{pmatrix}
+          |\nu_\alpha\rangle \\
+          |\nu_\beta\rangle
+        \end{pmatrix} = 
+        \begin{pmatrix}
+          U_{\alpha 1} & U_{\alpha 2} \\
+          U_{\beta  1} & U_{\beta  2}
+        \end{pmatrix}
+        \begin{pmatrix}
+          |\nu_1\rangle \\
+          |\nu_2\rangle
+        \end{pmatrix}
+      \end{split}
+    \end{align}
+  \item Probability of oscillation from $\nu_\alpha$ to $\nu_\beta$:
+    \begin{align}
+      P(\nu_\alpha \rightarrow \nu_\beta) = \left|\langle \nu_\beta(x,t)|\nu_\alpha(0,0\rangle\right|^2
+    \end{align}
+  \item In this simple two neutrino model this yields probability expressions for the form:
+    \begin{align}
+      P(\nu_\mu\rightarrow\nu_e)   &= \sin^2(2\theta) \sin^2\left(\frac{1.27\Delta m^2[\text{eV}^2] L[\text{km}]}{E[\text{GeV}]}\right) \\
+      P(\nu_\mu\rightarrow\nu_\mu) &= 1 - \sin^2(2\theta) \sin^2\left(\frac{1.27\Delta m^2[\text{eV}^2] L[\text{km}]}{E[\text{GeV}]}\right)
+    \end{align}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Flavor Oscillations}
+  \begin{center}
+    \includegraphics[width=.6\linewidth]{../figures/oscillation_prob.pdf}    
+  \end{center}
+  \begin{itemize}
+\item Oscillation and survival probabilities for the two neutrino state with an initial $\nu_{\mu}$. The values for $\Delta m^2$ and $\sin^22\theta$ ($2.41\times 10^{-3}$ eV$^2$ and 0.97, respectively) are taken from 2013 MINOS result (PRL, 110, 251801)    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{See-Saw Model}
+  \begin{itemize}
+  \item Popular way to explain why there are light left-handed neutrinos and no observed right-handed neutrinos.
+  \item Right-handed states would be sterile -- don't interact (or interact only very weakly) via weak weak interactions.
+  \end{itemize}
+  \begin{center}
+    \includegraphics[width=.75\linewidth]{../figures/seesaw.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{See-Saw continued}
+  \begin{align}
+    \begin{split}
+    \begin{pmatrix}
+      \overline{\nu} & \overline{N}
+    \end{pmatrix}
+    \begin{pmatrix}
+      0 & m_D \\
+      m_D & M
+    \end{pmatrix}
+    \begin{pmatrix}
+      \nu \\ N
+    \end{pmatrix}
+    \end{split}
+  \end{align}
+  \begin{itemize}
+    \item For the Dirac mass much ness than $M$, eigenvalues are $-m_D^2/M$ and $M$, with eigenstates made from mostly $\nu$ and $N$, respectively.
+    \item This means that as $M$ goes up or down $m_D^2/M$ does the opposite -- hence the See-Saw.
+    \item We are left with light-left handed neutrinos and heavy right-handed.
+    \item There are 3 types of See-Saw model (I, II, III) that involve the introduction of isospin singlets, scalar triplets, and fermion triplets.
+    \item Drawing distinctions is beyond the scope of this project.
   \end{itemize}
 \end{frame}
 
@@ -136,9 +355,9 @@
         \item Collected data at Fermilab from 2002 to 2012
         \item Cherenkov detector using PMTs (just like LSND)
         \item 8 GeV protons from the Booster strike beryllium target, pions decay producing neutrinos
-        \begin{center}
-          \includegraphics[width=.9\linewidth]{../figures/miniboone_excess.pdf}
-        \end{center}
+          \begin{center}
+            \includegraphics[width=.9\linewidth]{../figures/miniboone_excess.pdf}
+          \end{center}
         \end{itemize}
       \end{column}
       \begin{column}{.5\linewidth}
@@ -159,43 +378,43 @@
 
 \begin{frame}
   \frametitle{The MINOS/MINOS+ Experiment}
-   \begin{itemize}
-     \item Long baseline, disappearance experiment
-     \item Latest results now exclude much of the LSND allowed phase space
-       \begin{center}
-         \includegraphics[width=.9\linewidth]{../figures/minos2.pdf}
-       \end{center}
-   \end{itemize}
+  \begin{itemize}
+  \item Long baseline, disappearance experiment
+  \item Latest results now exclude much of the LSND allowed phase space
+    \begin{center}
+      \includegraphics[width=.9\linewidth]{../figures/minos2.pdf}
+    \end{center}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Super-Kamiokande Experiment}
-   \begin{itemize}
-     \item Atmospheric, TODO experiment
-     \item Latest results TODO
-       \begin{center}
-         \includegraphics[width=.5\linewidth]{../figures/sk1.pdf}
-       \end{center}
-   \end{itemize}
+  \begin{itemize}
+  \item Atmospheric, TODO experiment
+  \item Latest results TODO
+    \begin{center}
+      \includegraphics[width=.5\linewidth]{../figures/sk1.pdf}
+    \end{center}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{The Daya Bay Experiment}
-   \begin{itemize}
-     \item Reactor, TODO experiment
-     \item Latest results TODO
-       \begin{center}
-         \includegraphics[width=.5\linewidth]{../figures/daya1.pdf}
-       \end{center}
-   \end{itemize}
+  \begin{itemize}
+  \item Reactor, TODO experiment
+  \item Latest results TODO
+    \begin{center}
+      \includegraphics[width=.5\linewidth]{../figures/daya1.pdf}
+    \end{center}
+  \end{itemize}
 \end{frame}
 
 
 \begin{frame}
   \frametitle{Conclusions}
-   \begin{itemize}
-     \item Sterile neutrinos\ldots
-   \end{itemize}
+  \begin{itemize}
+  \item Sterile neutrinos\ldots
+  \end{itemize}
 \end{frame}
 
 
